@@ -1,5 +1,5 @@
-import * as cities from "../repositories/cityRepository.js";
-import * as airports from "../repositories/airportRepository.js";
+import * as cities from "../repositories/city.repository.js";
+import * as airports from "../repositories/airport.repository.js";
 import { validateCity } from "../validators/cityValidator.js";
 import { HttpError, assertValid, parseId } from "../utils/httpError.js";
 

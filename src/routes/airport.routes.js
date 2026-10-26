@@ -1,14 +1,14 @@
 import { Router } from "express";
-import * as ctrl from "../controllers/airport,controller.js";
+import * as ctrl from "../controllers/airport.controller.js";
 import { authenticate } from "../middleware/authenticate.js";
 import { authorizeAdmin } from "../middleware/authorizeAdmin.js";
 
-const router = Router();
-router.use(authenticate);
+const airportRouter = Router();
+airportRouter.use(authenticate);
 
-router.get("/", ctrl.list);
-router.get("/:id", ctrl.getOne);
-router.post("/", authorizeAdmin, ctrl.create);
-router.put("/:id", authorizeAdmin, ctrl.update);
+airportRouter.get("/", ctrl.list);
+airportRouter.get("/:id", ctrl.getOne);
+airportRouter.post("/", authorizeAdmin, ctrl.create);
+airportRouter.put("/:id", authorizeAdmin, ctrl.update);
 
-export default router;
+export default airportRouter;
