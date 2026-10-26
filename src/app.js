@@ -1,13 +1,13 @@
 import express from "express";
-// import authRoutes from "./routes/authRoutes.js";
-// import cityRoutes from "./routes/cityRoutes.js";
-// import airportRoutes from "./routes/airportRoutes.js";
+import authRoutes from "./routes/auth.routes.js";
+// import cityRoutes from "./routes/city.routes.js";
+// import airportRoutes from "./routes/airport.routes.js";
 import { errorHandler } from "./middleware/errorHandler.js";
 
 const app = express();
 app.use(express.json());
 
-// app.use("/api/auth", authRoutes);
+app.use("/api/auth", authRoutes);
 // app.use("/api/cities", cityRoutes);
 // app.use("/api/airports", airportRoutes);
 
