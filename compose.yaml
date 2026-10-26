@@ -9,9 +9,11 @@ services:
       PORT: 3000
       DB_HOST: mysql
       DB_PORT: 3306
-      DB_NAME: ${MYSQL_DATABASE:-dwes}
+      DB_NAME: ${MYSQL_DATABASE:-dwes_airports}
       DB_USER: ${MYSQL_USER:-dwes}
       DB_PASSWORD: ${MYSQL_PASSWORD:-dwes}
+      JWT_SECRET: ${JWT_SECRET:?Define JWT_SECRET en el archivo .env}
+      JWT_EXPIRES_IN: ${JWT_EXPIRES_IN:-3600}
     volumes:
       - ./src:/app/src:ro
       - node_modules:/app/node_modules
@@ -25,7 +27,7 @@ services:
       - "${MYSQL_PORT:-3306}:3306"
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-root}
-      MYSQL_DATABASE: ${MYSQL_DATABASE:-dwes}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-dwes_airports}
       MYSQL_USER: ${MYSQL_USER:-dwes}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD:-dwes}
     volumes:
