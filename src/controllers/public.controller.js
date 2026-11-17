@@ -1,9 +1,9 @@
 // Importa todas las funciones del repositorio encargado de consultar ciudades.
-import * as cities from "../repositories/cityRepository.js";
+import * as cities from "../repositories/city.repository.js";
 // Importa todas las funciones del repositorio encargado de consultar aeropuertos.
-import * as airports from "../repositories/airportRepository.js";
+import * as airports from "../repositories/airport.repository.js";
 // Importa todas las funciones del repositorio encargado de consultar vuelos.
-import * as flights from "../repositories/flightRepository.js";
+import * as flights from "../repositories/flight.repository.js";
 // Importa el error HTTP y las utilidades para validar y convertir identificadores.
 import { HttpError, assertValid, parseId } from "../utils/httpError.js";
 
